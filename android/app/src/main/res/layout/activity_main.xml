@@ -34,8 +34,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/coding" />
+                    android:src="@drawable/coding"/>
 
                 <TextView
                     android:id="@+id/cat_1"
@@ -81,8 +80,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/meeting" />
+                    android:src="@drawable/meeting"/>
 
                 <TextView
                     android:id="@+id/cat_2"
@@ -128,8 +126,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/mailing" />
+                    android:src="@drawable/mailing"/>
 
                 <TextView
                     android:id="@+id/cat_3"
@@ -177,8 +174,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/aerox" />
+                    android:src="@drawable/aerox"/>
 
                 <TextView
                     android:id="@+id/cat_4"
@@ -224,8 +220,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/aerialcore" />
+                    android:src="@drawable/aerialcore"/>
 
                 <TextView
                     android:id="@+id/cat_5"
@@ -271,8 +266,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/coffe" />
+                    android:src="@drawable/coffee"/>
 
                 <TextView
                     android:id="@+id/cat_6"
@@ -319,8 +313,7 @@
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/planning" />
+                    android:src="@drawable/planning"/>
 
                 <TextView
                     android:id="@+id/cat_7"
@@ -366,8 +359,7 @@
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/research" />
+                    android:src="@drawable/research" />
 
                 <TextView
                     android:id="@+id/cat_8"
@@ -413,8 +405,7 @@
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    app:srcCompat="@drawable/training" />
+                    android:src="@drawable/training" />
 
                 <TextView
                     android:id="@+id/cat_9"

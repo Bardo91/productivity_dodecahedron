@@ -77,7 +77,7 @@ public class ConnectionManager  extends Thread {
                 List<String> arrayTime = Arrays.asList(rawTimes.split(","));
                 if(arrayTime.size() == 12+1){
                     for(int i = 0; i < 12; i++){
-                        int sec = Integer.parseInt(arrayTime.get(i));
+                        int sec = (int) Float.parseFloat(arrayTime.get(i));
                         Date d = new Date(sec * 1000L);
                         SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
                         df.setTimeZone(TimeZone.getTimeZone("GMT"));
