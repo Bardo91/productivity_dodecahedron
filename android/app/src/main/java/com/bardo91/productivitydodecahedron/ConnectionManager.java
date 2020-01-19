@@ -14,9 +14,12 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.UUID;
 
 public class ConnectionManager  extends Thread {
@@ -74,7 +77,12 @@ public class ConnectionManager  extends Thread {
                 List<String> arrayTime = Arrays.asList(rawTimes.split(","));
                 if(arrayTime.size() == 12+1){
                     for(int i = 0; i < 12; i++){
-                        viewManager.updateTime(i, arrayTime.get(i));
+                        int sec = Integer.parseInt(arrayTime.get(i));
+                        Date d = new Date(sec * 1000L);
+                        SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+                        df.setTimeZone(TimeZone.getTimeZone("GMT"));
+                        String timeStr = df.format(d);
+                        viewManager.updateTime(i, timeStr);
                     }
                 }
 

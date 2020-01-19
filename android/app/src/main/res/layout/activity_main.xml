@@ -30,9 +30,21 @@
 
                 <ImageView
                     android:id="@+id/iv_1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/coding" />
+
+                <TextView
+                    android:id="@+id/cat_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Coding"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_1"
@@ -65,9 +77,21 @@
 
                 <ImageView
                     android:id="@+id/iv_2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/meeting" />
+
+                <TextView
+                    android:id="@+id/cat_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Meetings"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_2"
@@ -100,9 +124,21 @@
 
                 <ImageView
                     android:id="@+id/iv_3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/mailing" />
+
+                <TextView
+                    android:id="@+id/cat_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Emails"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_3"
@@ -137,9 +173,21 @@
 
                 <ImageView
                     android:id="@+id/iv_4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/aerox" />
+
+                <TextView
+                    android:id="@+id/cat_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AEROX"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_4"
@@ -172,9 +220,21 @@
 
                 <ImageView
                     android:id="@+id/iv_5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/aerialcore" />
+
+                <TextView
+                    android:id="@+id/cat_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AERIALCORE"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_5"
@@ -207,9 +267,21 @@
 
                 <ImageView
                     android:id="@+id/iv_6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/coffe" />
+
+                <TextView
+                    android:id="@+id/cat_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Break"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_6"
@@ -243,9 +315,21 @@
 
                 <ImageView
                     android:id="@+id/iv_7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/planning" />
+
+                <TextView
+                    android:id="@+id/cat_7"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:text="Planning"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_7"
@@ -278,9 +362,21 @@
 
                 <ImageView
                     android:id="@+id/iv_8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/research" />
+
+                <TextView
+                    android:id="@+id/cat_8"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:text="Research"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_8"
@@ -313,9 +409,21 @@
 
                 <ImageView
                     android:id="@+id/iv_9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:srcCompat="@drawable/training" />
+
+                <TextView
+                    android:id="@+id/cat_9"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:text="Training"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_9"
@@ -351,9 +459,18 @@
 
                 <ImageView
                     android:id="@+id/iv_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/cat_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Others_1"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_10"
@@ -386,9 +503,18 @@
 
                 <ImageView
                     android:id="@+id/iv_11"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/cat_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Others_2"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_11"
@@ -421,9 +547,18 @@
 
                 <ImageView
                     android:id="@+id/iv_12"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/cat_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Others_3"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_12"
