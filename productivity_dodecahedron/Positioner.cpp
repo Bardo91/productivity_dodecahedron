@@ -43,9 +43,9 @@ void Positioner::update(){
   std[2]/=maxMeasures;
 
   float avgStd = (std[0]+std[1]+std[2])/3;
-  Serial.print(" --- ");
-  Serial.print(avgStd);
-  Serial.print(" --- ");
+  //Serial.print(" --- ");
+  //Serial.print(avgStd);
+  //Serial.print(" --- ");
   
   if(avgStd < cMaxStd){
     isStable_ = true;

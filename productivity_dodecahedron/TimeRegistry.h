@@ -8,6 +8,7 @@
 class TimeRegistry{
 public:
   void update(int _id);
+  void saveCurrent();
 
   void reset();
 

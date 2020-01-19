@@ -23,6 +23,14 @@ void TimeRegistry::update(int _id){
   }
 }
 
+void TimeRegistry::saveCurrent(){
+  if(lastId > -1 && lastId <= cMaxCategories){
+    float incT = millis() - lastTime;
+    timeRegistry_[lastId] += incT/1000;
+  }
+  lastTime = millis();
+}
+
 
 void TimeRegistry::reset(){
   lastId = -1;
