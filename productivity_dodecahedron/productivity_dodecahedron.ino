@@ -22,9 +22,9 @@ void loop() {
   float x,y,z;
   positioner.getPosition(x,y,z);
   Serial.print(x);
-  Serial.print(" -- ");
+  Serial.print(", ");
   Serial.print(y);
-  Serial.print(" -- ");
+  Serial.print(", ");
   Serial.print(z);
   Serial.print(" -->>> ");
   positioner.update();
