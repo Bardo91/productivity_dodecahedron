@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
     BluetoothAdapter bluetoothAdapter;
     ConnectionManager connectionManager;
 
-    TextView display;
+    private ViewManager viewManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        display = findViewById(R.id.text_display);
+        viewManager = new ViewManager(this);
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter == null) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("Productivity", deviceName);
                 if(deviceName.equals("HC-06")){
-                    connectionManager = new ConnectionManager(device, display, this);
+                    connectionManager = new ConnectionManager(device, viewManager);
                     connectionManager.start();
                 }
             }

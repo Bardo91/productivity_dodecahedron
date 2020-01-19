@@ -14,6 +14,9 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 public class ConnectionManager  extends Thread {
@@ -27,19 +30,14 @@ public class ConnectionManager  extends Thread {
     private OutputStream oStream = null;
 
     private TextView display = null;
-    Activity activity = null;
+    private ViewManager viewManager = null;
 
-    public ConnectionManager(BluetoothDevice device, TextView _display, Activity _activity){
-        display = _display;
-        activity = _activity;
-        // Use a temporary object that is later assigned to mmSocket
-        // because mmSocket is final.
+    public ConnectionManager(BluetoothDevice device, ViewManager _viewManager){
+        viewManager = _viewManager;
         BluetoothSocket tmp = null;
         mmDevice = device;
 
         try {
-            // Get a BluetoothSocket to connect with the given BluetoothDevice.
-            // MY_UUID is the app's UUID string, also used in the server code.
             tmp = device.createRfcommSocketToServiceRecord(PRODUCTIVITY_UUID);
         } catch (IOException e) {
             Log.e("Productivity", "Socket's create() method failed", e);
@@ -62,9 +60,6 @@ public class ConnectionManager  extends Thread {
             return;
         }
 
-        // The connection attempt succeeded. Perform work associated with
-        // the connection in a separate thread.
-
         try {
             iStream = mmSocket.getInputStream(); // If the connection is made, instanciate input and output streams into declarated variables to read and write
             oStream = mmSocket.getOutputStream();
@@ -73,16 +68,15 @@ public class ConnectionManager  extends Thread {
             while(mmSocket.isConnected()){
                 oStream.write(1);
                 int nBytes = iStream.read(buffer);
-                final String command = new String(buffer, 0, nBytes);
-                Log.d("Productivity", command);
+                final String rawTimes = new String(buffer, 0, nBytes);
+                Log.d("Productivity", rawTimes);
 
-                activity.runOnUiThread(new Runnable() {
-                    private final String cmd = command;
-                    @Override
-                    public void run() {
-                        display.setText(cmd);
+                List<String> arrayTime = Arrays.asList(rawTimes.split(","));
+                if(arrayTime.size() == 12+1){
+                    for(int i = 0; i < 12; i++){
+                        viewManager.updateTime(i, arrayTime.get(i));
                     }
-                });
+                }
 
                 try {
                     Thread.sleep(1000);
