@@ -3,6 +3,7 @@ package com.bardo91.productivitydodecahedron;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
+
+import com.rm.freedrawview.FreeDrawView;
 
 import java.util.ArrayList;
 
@@ -133,19 +136,34 @@ public class ViewManager {
     }
 
 
-    private void createEditImageDialog(final View v){
+    private void createEditImageDialog(final View _v){
         AlertDialog.Builder builder = new AlertDialog.Builder(mainActivity_);
+
+        LayoutInflater inflater = mainActivity_.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.dialog_edit_image, null);
+        builder.setView(dialogView);
+
+        final FreeDrawView drawer = (FreeDrawView) dialogView.findViewById(R.id.image_drawer);
+
         builder.setMessage(R.string.dialog_edit_image);
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // User clicked OK button
+                drawer.getDrawScreenshot(new FreeDrawView.DrawCreatorListener() {
+                    @Override
+                    public void onDrawCreated(Bitmap draw) {
+                        ((ImageView) _v).setImageBitmap(draw);
+                    }
+
+                    @Override
+                    public void onDrawCreationError() {
+                        // Something went wrong creating the bitmap, should never
+                        // happen unless the async task has been canceled
+                    }
+                });
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                // User cancelled the dialog
-            }
-        });
+            public void onClick(DialogInterface dialog, int id) { } });
 
         // Create the AlertDialog
         Dialog dialog = builder.create();
