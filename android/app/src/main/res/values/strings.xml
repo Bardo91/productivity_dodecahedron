@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProductivityDodecahedron</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="dialog_edit_label">Edit Label</string>
+    <string name="dialog_edit_image">Edit Image</string>
 </resources>
