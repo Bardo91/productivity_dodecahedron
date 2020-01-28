@@ -76,14 +76,13 @@ public class ConnectionManager  extends Thread {
 
                 List<String> arrayTime = Arrays.asList(rawTimes.split(","));
                 if(arrayTime.size() == 12+1){
+                    int totalSecs = 0;
                     for(int i = 0; i < 12; i++){
                         int sec = (int) Float.parseFloat(arrayTime.get(i));
-                        Date d = new Date(sec * 1000L);
-                        SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
-                        df.setTimeZone(TimeZone.getTimeZone("GMT"));
-                        String timeStr = df.format(d);
-                        viewManager.updateTime(i, timeStr);
+                        totalSecs+=sec;
+                        viewManager.updateTime(i, formatSecs(sec));
                     }
+                    viewManager.updateTotalTime(formatSecs(totalSecs));
                 }
 
                 try {
@@ -97,6 +96,14 @@ public class ConnectionManager  extends Thread {
             e.printStackTrace();
         }
 
+    }
+
+    private String formatSecs(int _secs){
+        Date d = new Date(_secs * 1000L);
+        SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+        df.setTimeZone(TimeZone.getTimeZone("GMT"));
+        String timeStr = df.format(d);
+        return timeStr;
     }
 
     // Closes the connect socket and causes the thread to finish.

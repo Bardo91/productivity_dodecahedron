@@ -21,12 +21,16 @@ import java.util.ArrayList;
 public class ViewManager {
 
     private ArrayList<TextView> textViews = new ArrayList<>();
+    private TextView totalTimeView = null;
     private ArrayList<TextView> labelViews = new ArrayList<>();
     private ArrayList<ImageView> imageViews = new ArrayList<>();
     private Activity mainActivity_ = null;
 
     public ViewManager(Activity _activity){
         mainActivity_ = _activity;
+
+        totalTimeView = mainActivity_.findViewById(R.id.total_time);
+
         textViews.add((TextView) mainActivity_.findViewById(R.id.tv_1));
         imageViews.add((ImageView) mainActivity_.findViewById(R.id.iv_1));
         labelViews.add((TextView) mainActivity_.findViewById(R.id.cat_1));
@@ -97,6 +101,18 @@ public class ViewManager {
 
     }
 
+
+    public void updateTotalTime(final String _text){
+        if(mainActivity_ == null)
+            return;
+
+        mainActivity_.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                totalTimeView.setText(_text);
+            }
+        });
+    }
 
     public void updateTime(final int _id, final String _text){
         if(mainActivity_ == null)
